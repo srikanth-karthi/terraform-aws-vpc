@@ -5,9 +5,17 @@ variable "region" {
 
 
 variable "default_tags" {
-  description = "A map of default tags to apply to resources"
+  description = "A map of default tags to apply to all resources. Required keys: Owner, Project, Environment."
   type        = map(string)
-  default     = {}
+
+  validation {
+    condition = alltrue([
+      can(var.default_tags["Owner"]),
+      can(var.default_tags["Project"]),
+      can(var.default_tags["Environment"])
+    ])
+    error_message = "The 'default_tags' variable must include the keys: 'Owner', 'Project', and 'Environment'."
+  }
 }
 
 
