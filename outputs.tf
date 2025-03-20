@@ -1,5 +1,5 @@
 output "vpc_id" {
-  value = aws_vpc.srikanth_vpc.id
+  value = aws_vpc.main_vpc.id
 }
 
 output "public_subnet_1_id" {
@@ -19,5 +19,5 @@ output "private_subnet_2_id" {
 }
 
 output "vpc_cidr_block" {
-  value = aws_vpc.srikanth_vpc.cidr_block
+  value = aws_vpc.main_vpc.cidr_block
 }
