@@ -18,7 +18,6 @@ To use this module, include the following in your Terraform configuration:
 ```hcl
 module "vpc" {
   source             = "srikanth-karthi/vpc/aws"
-  version            = "1.0.0"
   region             = "us-east-1"
   environment        = "dev"
   vpc_cidr           = "10.0.0.0/16"
