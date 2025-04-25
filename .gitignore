@@ -1,0 +1,40 @@
+# Terraform specific files
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Ignore crash logs
+crash.log
+
+# Ignore variable files with sensitive data
+*.tfvars
+*.tfvars.json
+
+# Ignore plan output
+*.plan
+
+# IDE and editor files
+.vscode/
+.idea/
+*.iml
+*.swp
+*.sublime-workspace
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# General binaries and executables
+*.exe
+*.out
+*.pyc
+*.class
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
